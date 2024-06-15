@@ -1,38 +1,48 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Dimensions, Pressable } from "react-native";
+import { Link } from "expo-router";
 import useThemeColors from "@/hooks/useThemeColor";
 import { Octicons } from "@expo/vector-icons";
 const { width } = Dimensions.get("window");
 interface HomeButtonProps {
   iconName: any;
   label: string;
+  navRoute: string;
 }
-export default function HomeButton({ iconName, label }: HomeButtonProps) {
+export default function HomeButton({
+  iconName,
+  label,
+  navRoute,
+}: HomeButtonProps) {
   const colors = useThemeColors();
 
   return (
-    <View
-      style={[
-        styles.homeBtn,
-        {
-          backgroundColor: colors.background,
-        },
-      ]}
-    >
-      <View>
-        <Octicons name={iconName} size={20} color={colors.icon} />
-      </View>
-      <Text
-        style={[
-          styles.btnText,
-          {
-            color: colors.text,
-          },
-        ]}
-      >
-        {label}
-      </Text>
-    </View>
+    <Link href={navRoute} asChild>
+      <Pressable>
+        <View
+          style={[
+            styles.homeBtn,
+            {
+              backgroundColor: colors.background,
+            },
+          ]}
+        >
+          <View>
+            <Octicons name={iconName} size={20} color={colors.icon} />
+          </View>
+          <Text
+            style={[
+              styles.btnText,
+              {
+                color: colors.text,
+              },
+            ]}
+          >
+            {label}
+          </Text>
+        </View>
+      </Pressable>
+    </Link>
   );
 }
 

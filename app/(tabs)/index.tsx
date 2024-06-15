@@ -14,12 +14,28 @@ export default function Home() {
       <Header />
       {/* buttons */}
       <View style={styles.buttons}>
-        <HomeButton iconName="beaker" label="Rate Master" />
-        <HomeButton iconName="flame" label="Sales" />
-        <HomeButton iconName="credit-card" label="Credits" />
-        <HomeButton iconName="log" label="Reports" />
-        <HomeButton iconName="arrow-switch" label="Expenses" />
-        <HomeButton iconName="calendar" label="Attendance" />
+        <HomeButton
+          iconName="beaker"
+          label="Rate Master"
+          navRoute="../rateMaster"
+        />
+        <HomeButton iconName="flame" label="Sales" navRoute="../sales" />
+        <HomeButton
+          iconName="credit-card"
+          label="Credits"
+          navRoute="../credits"
+        />
+        <HomeButton iconName="log" label="Reports" navRoute="../reports" />
+        <HomeButton
+          iconName="arrow-switch"
+          label="Expenses"
+          navRoute="../expenses"
+        />
+        <HomeButton
+          iconName="calendar"
+          label="Attendance"
+          navRoute="../attendance"
+        />
       </View>
       {/* main card*/}
       <MainCard />
