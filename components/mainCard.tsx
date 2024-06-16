@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import useThemeColors from "@/hooks/useThemeColor";
+import MainCardAmount from "./mainCardAmount";
+
 export default function MainCard() {
   const colors = useThemeColors();
 
@@ -15,77 +17,18 @@ export default function MainCard() {
     >
       <View style={styles.top}>
         {/* top */}
-        <View style={styles.amount}>
-          <View
-            style={[
-              styles.dot,
-              {
-                backgroundColor: "#c1817c",
-              },
-            ]}
-          ></View>
-          <View>
-            <Text
-              style={[
-                styles.amountLabel,
-                {
-                  color: colors.text,
-                },
-              ]}
-            >
-              Spent
-            </Text>
-            <Text
-              style={[
-                styles.amountFigure,
-                {
-                  color: colors.text,
-                },
-              ]}
-            >
-              ₹344.00
-            </Text>
-          </View>
-        </View>
-        <View
-          style={[
-            styles.amount,
-            {
-              justifyContent: "flex-end",
-            },
-          ]}
-        >
-          <View
-            style={[
-              styles.dot,
-              {
-                backgroundColor: "#00000090",
-              },
-            ]}
-          ></View>
-          <View>
-            <Text
-              style={[
-                styles.amountLabel,
-                {
-                  color: colors.text,
-                },
-              ]}
-            >
-              Earned
-            </Text>
-            <Text
-              style={[
-                styles.amountFigure,
-                {
-                  color: colors.text,
-                },
-              ]}
-            >
-              ₹344.00
-            </Text>
-          </View>
-        </View>
+        <MainCardAmount
+          label="Spent"
+          amount="344.00"
+          dotColor="#c1817c"
+          hasIcon={false}
+        />
+        <MainCardAmount
+          label="Earned"
+          amount="344.00"
+          dotColor="#00000090"
+          hasIcon={false}
+        />
       </View>
       {/* middle */}
       <View style={styles.spent}>
@@ -134,6 +77,7 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: 35,
     padding: 15,
+    borderRadius: 20,
   },
   top: {
     flexDirection: "row",

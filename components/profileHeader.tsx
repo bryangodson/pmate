@@ -1,16 +1,23 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Image } from "expo-image";
 import useThemeColors from "@/hooks/useThemeColor";
-import { Octicons } from "@expo/vector-icons";
 import { HelloWave } from "@/components/HelloWave";
-export default function Header() {
+import MainCardAmount from "./mainCardAmount";
+import Separator from "./separator";
+export default function ProfileHeader() {
   const colors = useThemeColors();
   const blurhash =
     "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
   return (
-    <View style={styles.header}>
+    <View
+      style={[
+        styles.header,
+        {
+          backgroundColor: colors.background,
+        },
+      ]}
+    >
       <View style={styles.user}>
         <Image
           source="https://picsum.photos/seed/696/3000/2000"
@@ -20,16 +27,6 @@ export default function Header() {
           style={styles.image}
         />
         <View>
-          <Text
-            style={[
-              styles.greetings,
-              {
-                color: colors.text,
-              },
-            ]}
-          >
-            Good Morning
-          </Text>
           <View
             style={{
               flexDirection: "row",
@@ -47,32 +44,59 @@ export default function Header() {
             </Text>
             <HelloWave />
           </View>
+          <View
+            style={{
+              flexDirection: "row",
+            }}
+          >
+            <Text
+              style={[
+                styles.greetings,
+                {
+                  color: colors.text,
+                },
+              ]}
+            >
+              +233 455 344 344
+            </Text>
+          </View>
         </View>
       </View>
-      <View style={[styles.icon, { backgroundColor: colors.background }]}>
-        <Octicons name="search" size={24} color={colors.icon} />
+      <View style={styles.amounts}>
+        <MainCardAmount
+          label="Income"
+          amount="30,344.00"
+          dotColor="#8bc34a"
+          hasIcon={true}
+          icon="download"
+        />
+        <Separator />
+        <MainCardAmount
+          label="Expenses"
+          amount="30,344.00"
+          dotColor="#c1817c"
+          hasIcon={true}
+          icon="upload"
+        />
       </View>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   header: {
     width: "100%",
     justifyContent: "space-between",
-    flexDirection: "row",
-    height: 50,
-    alignItems: "center",
-    marginBottom: 25,
+    padding: 18,
+    borderRadius: 20,
   },
   user: {
     flexDirection: "row",
     alignItems: "center",
   },
   image: {
-    height: 48,
-    width: 48,
-    borderRadius: 24,
+    height: 52,
+    width: 52,
+    borderRadius: 25.5,
     marginRight: 8,
   },
   name: {
@@ -84,11 +108,11 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontFamily: "ft",
   },
-  icon: {
-    width: 40,
-    height: 40,
+  amounts: {
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "space-between",
+    marginTop: 10,
     alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 20,
   },
 });

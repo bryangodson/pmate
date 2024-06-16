@@ -32,14 +32,82 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colors == "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="attendance" options={{ headerShown: false }} />
-        <Stack.Screen name="credits" options={{ headerShown: false }} />
-        <Stack.Screen name="expenses" options={{ headerShown: false }} />
-        <Stack.Screen name="rateMaster" options={{ headerShown: false }} />
-        <Stack.Screen name="reports" options={{ headerShown: false }} />
-        <Stack.Screen name="sales" options={{ headerShown: false }} />
+      <Stack
+        screenOptions={{
+          headerShown: true,
+          headerBackTitleVisible: false,
+          headerTitleStyle: {
+            fontFamily: "ft",
+          },
+        }}
+      >
+        <Stack.Screen
+          name="(tabs)"
+          options={{
+            headerShown: false,
+            title: "Tab",
+          }}
+        />
+        <Stack.Screen
+          name="attendance"
+          options={{
+            title: "Attendance",
+          }}
+        />
+        <Stack.Screen
+          name="credits"
+          options={{
+            title: "Credits",
+          }}
+        />
+        <Stack.Screen
+          name="expenses"
+          options={{
+            title: "Expenses",
+          }}
+        />
+        <Stack.Screen
+          name="rateMaster"
+          options={{
+            title: "Rate Master",
+          }}
+        />
+        <Stack.Screen
+          name="reports"
+          options={{
+            title: "Reports",
+          }}
+        />
+        <Stack.Screen
+          name="sales"
+          options={{
+            title: "Sales",
+          }}
+        />
+        <Stack.Screen
+          name="assets"
+          options={{
+            title: "Assets",
+          }}
+        />
+        <Stack.Screen
+          name="banks"
+          options={{
+            title: "Banks",
+          }}
+        />
+        <Stack.Screen
+          name="cashFlows"
+          options={{
+            title: "Cash Flows",
+          }}
+        />
+        <Stack.Screen
+          name="stocks"
+          options={{
+            title: "Stocks",
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );
