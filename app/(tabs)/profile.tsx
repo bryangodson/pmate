@@ -146,8 +146,7 @@ const styles = StyleSheet.create({
 
   info: {
     fontSize: 18,
-    fontFamily: "ft",
-    fontWeight: "700",
+    fontFamily: "regular",
     marginVertical: 12,
     marginLeft: 10,
   },

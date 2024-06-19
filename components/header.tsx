@@ -76,13 +76,12 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   name: {
-    fontWeight: "700",
     fontSize: 16,
-    fontFamily: "ft",
+    fontFamily: "medium",
   },
   greetings: {
     fontSize: 10,
-    fontFamily: "ft",
+    fontFamily: "regular",
   },
   icon: {
     width: 40,

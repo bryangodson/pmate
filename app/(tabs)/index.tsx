@@ -58,46 +58,4 @@ const styles = StyleSheet.create({
     columnGap: 10,
     rowGap: 15,
   },
-  mainCard: {
-    width: "100%",
-    marginTop: 35,
-    padding: 15,
-  },
-  top: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  amount: {
-    flexDirection: "row",
-    alignItems: "center",
-    width: "50%",
-  },
-  dot: {
-    width: 15,
-    height: 15,
-    borderRadius: 7.5,
-    marginRight: 10,
-  },
-  amountLabel: {
-    fontFamily: "ft",
-  },
-  amountFigure: {
-    fontSize: 20,
-    fontWeight: "500",
-  },
-  spent: {
-    marginTop: 20,
-  },
-  spentText: {
-    fontFamily: "ft",
-    fontSize: 16,
-    lineHeight: 22.4,
-  },
-  last: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: 20,
-  },
 });

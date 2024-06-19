@@ -84,29 +84,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  amount: {
-    flexDirection: "row",
-    alignItems: "center",
-    width: "50%",
-  },
-  dot: {
-    width: 15,
-    height: 15,
-    borderRadius: 7.5,
-    marginRight: 10,
-  },
-  amountLabel: {
-    fontFamily: "ft",
-  },
-  amountFigure: {
-    fontSize: 20,
-    fontWeight: "500",
-  },
+
   spent: {
     marginTop: 20,
   },
   spentText: {
-    fontFamily: "ft",
+    fontFamily: "regular",
     fontSize: 16,
     lineHeight: 22.4,
   },

@@ -29,8 +29,8 @@ export default function TableHead({
       <Text
         style={{
           color: colors.text,
-          fontSize: 20,
-          fontFamily: "ft",
+          fontSize: isItem ? 16 : 18,
+          fontFamily: isItem ? "medium" : "regular",
         }}
       >
         {leftLabel}
@@ -38,8 +38,8 @@ export default function TableHead({
       <Text
         style={{
           color: colors.text,
-          fontSize: 20,
-          fontFamily: "ft",
+          fontSize: isItem ? 16 : 18,
+          fontFamily: isItem ? "medium" : "regular",
         }}
       >
         {RightLabel}

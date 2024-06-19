@@ -1,13 +1,14 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet, FlatList, Dimensions } from "react-native";
 import useThemeColors from "@/hooks/useThemeColor";
 import SearchBar from "@/components/searchBar";
 import Date from "@/components/date";
 import TableHead from "@/components/tableHead";
+import SeparatorHorizontal from "@/components/separator_horizal";
 const { width, height } = Dimensions.get("window");
 const RateMaster = () => {
   const colors = useThemeColors();
-  const DATA = [
+  const [DATA, setData] = useState([
     {
       description: "2T OIL",
       pl_rate: "0.00",
@@ -56,7 +57,7 @@ const RateMaster = () => {
       description: "last item",
       pl_rate: "0.00",
     },
-  ];
+  ]);
   return (
     <View style={styles.container}>
       <SearchBar />
@@ -81,16 +82,7 @@ const RateMaster = () => {
               />
             )}
             showsVerticalScrollIndicator={false}
-            ItemSeparatorComponent={() => (
-              <View
-                style={{
-                  width: "100%",
-                  height: 1,
-                  backgroundColor: colors.text,
-                  opacity: 0.05,
-                }}
-              ></View>
-            )}
+            ItemSeparatorComponent={() => <SeparatorHorizontal />}
           />
         </View>
       </View>
@@ -172,7 +164,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    fontFamily: "ft",
+    fontFamily: "medium",
     textAlign: "center",
   },
 });

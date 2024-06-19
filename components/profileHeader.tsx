@@ -102,11 +102,11 @@ const styles = StyleSheet.create({
   name: {
     fontWeight: "700",
     fontSize: 16,
-    fontFamily: "ft",
+    fontFamily: "medium",
   },
   greetings: {
     fontSize: 10,
-    fontFamily: "ft",
+    fontFamily: "regular",
   },
   amounts: {
     flexDirection: "row",

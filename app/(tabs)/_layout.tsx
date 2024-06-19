@@ -10,7 +10,7 @@ export default function TabLayout() {
         tabBarActiveTintColor: colors.tabIconSelected,
         tabBarActiveBackgroundColor: colors.background,
         tabBarLabelStyle: {
-          fontFamily: "ft",
+          fontFamily: "bold",
           marginBottom: 5,
         },
         tabBarIcon: ({ focused }) => {

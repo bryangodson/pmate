@@ -13,9 +13,10 @@ const Date = () => {
       <Octicons name="calendar" size={18} color={colors.icon} />
       <Text
         style={{
-          fontFamily: "ft",
+          fontFamily: "regular",
           color: colors.text,
           marginLeft: 8,
+          opacity: 0.7,
         }}
       >
         23/04/2424 - 23/04/2424

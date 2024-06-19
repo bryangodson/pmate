@@ -17,7 +17,9 @@ export default function RootLayout() {
   const colors = useColorScheme();
 
   const [loaded] = useFonts({
-    ft: require("../assets/fonts/Manrope.ttf"),
+    regular: require("../assets/fonts/Montserrat-Light.ttf"),
+    medium: require("../assets/fonts/Montserrat-Medium.ttf"),
+    bold: require("../assets/fonts/Montserrat-Bold.ttf"),
   });
 
   useEffect(() => {
@@ -37,7 +39,7 @@ export default function RootLayout() {
           headerShown: true,
           headerBackTitleVisible: false,
           headerTitleStyle: {
-            fontFamily: "ft",
+            fontFamily: "regular",
           },
         }}
       >

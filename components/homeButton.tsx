@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: "center",
     marginTop: 5,
-    fontFamily: "ft",
+    fontFamily: "regular",
   },
 });

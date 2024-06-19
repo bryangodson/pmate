@@ -78,11 +78,10 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   amountLabel: {
-    fontFamily: "ft",
+    fontFamily: "regular",
   },
   amountFigure: {
-    fontSize: 22,
-    fontWeight: "500",
-    fontFamily: "ft",
+    fontSize: 18,
+    fontFamily: "bold",
   },
 });

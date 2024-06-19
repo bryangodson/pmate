@@ -82,5 +82,6 @@ const styles = StyleSheet.create({
     width: width - 60,
     height: 45,
     padding: 10,
+    fontFamily: "regular",
   },
 });

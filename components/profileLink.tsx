@@ -20,8 +20,7 @@ const ProfileLink = ({ label, icon, link, isSignOut }: linkProps) => {
             justifyContent: "space-between",
             padding: 8,
             alignItems: "center",
-            marginBottom: 10,
-            height: 47,
+            height: 55,
           }}
         >
           <View
@@ -38,10 +37,9 @@ const ProfileLink = ({ label, icon, link, isSignOut }: linkProps) => {
             <Text
               style={{
                 color: isSignOut ? "#c1817c" : colors.text,
-                fontSize: 18,
+                fontSize: 16,
                 marginLeft: 15,
-                fontFamily: "ft",
-                fontWeight: "500",
+                fontFamily: "regular",
               }}
             >
               {label}
@@ -51,6 +49,9 @@ const ProfileLink = ({ label, icon, link, isSignOut }: linkProps) => {
             name="chevron-right"
             color={isSignOut ? "#c1817c" : colors.icon}
             size={20}
+            style={{
+              opacity: 0.6,
+            }}
           />
         </View>
       </Pressable>
